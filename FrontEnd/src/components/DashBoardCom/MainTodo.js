@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { FaHandPointDown } from "react-icons/fa6";
 import { AiFillDelete } from "react-icons/ai";
 import axios from "axios";
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8080/api";
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://taskmanagerapp-production-91fc.up.railway.app/api";
 const MainTodo = ({ todo, setTodo }) => {
   useEffect(() => {
     axios

@@ -128,7 +128,7 @@ import axios from "axios";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8080/api";
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://taskmanagerapp-production-91fc.up.railway.app/api";
 
 const Note = (props) => {
   const { val, notes, setNotes, toast } = props;
@@ -247,7 +247,7 @@ import axios from "axios";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8080/api";
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://taskmanagerapp-production-91fc.up.railway.app/api";
 
 const Note = (props) => {
   const { val, notes, setNotes, toast } = props;

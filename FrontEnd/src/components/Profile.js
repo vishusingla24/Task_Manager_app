@@ -134,7 +134,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 // Define the API base URL
-const API_BASE_URL = "http://localhost:8080/api";
+const API_BASE_URL = "https://taskmanagerapp-production-91fc.up.railway.app/api";
 
 const Profile = ({ tasks }) => {
   const [quote, setQuote] = useState();
@@ -268,7 +268,7 @@ import axios from "axios";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const API_BASE_URL = "http://localhost:8080/api";
+const API_BASE_URL = "https://taskmanagerapp-production-91fc.up.railway.app/api";
 
 // Local fallback quotes
 const FALLBACK_QUOTES = [

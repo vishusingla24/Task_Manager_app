@@ -137,7 +137,7 @@ import axios from "axios";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./styles/todo.css";
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8080/api";
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://taskmanagerapp-production-91fc.up.railway.app/api";
 const Todo = ({ toast, todo, setTodo }) => {
   const [newItem, setNewItem] = useState("");
   const [searchQuery, setSearchQuery] = useState("");

@@ -11,7 +11,7 @@ export default function Mainpage({ toast, signIn, user }) {
   const navigate = useNavigate();
 
   // ✅ Ensuring API URL is properly set
-  const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
+  const API_BASE_URL = process.env.REACT_APP_API_URL || "https://taskmanagerapp-production-91fc.up.railway.app";
   
   // Debugging API URL
   console.log("API URL:", API_BASE_URL);
@@ -184,7 +184,7 @@ export default function Mainpage({ toast }) {
   const navigate = useNavigate();
 
   // ✅ API URL Configuration
-  const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
+  const API_BASE_URL = process.env.REACT_APP_API_URL || "https://taskmanagerapp-production-91fc.up.railway.app";
   
   console.log("API URL:", API_BASE_URL); // Debugging API URL
 
@@ -377,7 +377,7 @@ export default function Mainpage({ toast }) {
   const navigate = useNavigate();
 
   // ✅ API URL Configuration
-  const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
+  const API_BASE_URL = process.env.REACT_APP_API_URL || "https://taskmanagerapp-production-91fc.up.railway.app";
   
   console.log("API URL:", API_BASE_URL); // Debugging API URL
 
@@ -585,7 +585,7 @@ export default function Mainpage({ toast }) {
   const [userLogin, setUserLogin] = useState({ email: "", password: "" });
   const navigate = useNavigate();
 
-  const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
+  const API_BASE_URL = process.env.REACT_APP_API_URL || "https://taskmanagerapp-production-91fc.up.railway.app";
   
   const googleAuth = () => {
     window.open(`${API_BASE_URL}/auth/google`, "_self");

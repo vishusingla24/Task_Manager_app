@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { FaHandPointRight } from "react-icons/fa";
 import axios from "axios";
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8080/api";
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://taskmanagerapp-production-91fc.up.railway.app/api";
 const MainTask = ({ tasks, setTasks }) => {
   useEffect(() => {
     axios

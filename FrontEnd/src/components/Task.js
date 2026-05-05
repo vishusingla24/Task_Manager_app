@@ -228,7 +228,7 @@ import axios from "axios";
 import "aos/dist/aos.css";
 
 // Define the API base URL
-const API_BASE_URL = "http://localhost:8080/api";
+const API_BASE_URL = "https://taskmanagerapp-production-91fc.up.railway.app/api";
 
 const Task = ({ toast, tasks, setTasks }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -561,7 +561,7 @@ import axios from "axios";
 import "aos/dist/aos.css";
 
 // Define the API base URL
-const API_BASE_URL = "http://localhost:8080/api";
+const API_BASE_URL = "https://taskmanagerapp-production-91fc.up.railway.app/api";
 
 const Task = ({ toast, tasks, setTasks }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -900,7 +900,7 @@ import axios from "axios";
 import "aos/dist/aos.css";
 
 // Define the API base URL
-const API_BASE_URL = "http://localhost:8080/api";
+const API_BASE_URL = "https://taskmanagerapp-production-91fc.up.railway.app/api";
 
 const Task = ({ toast, tasks, setTasks }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -1327,7 +1327,7 @@ import axios from "axios";
 import "aos/dist/aos.css";
 
 // Define the API base URL
-const API_BASE_URL = process.env.REACT_APP_API_URL ||"http://localhost:8080/api";
+const API_BASE_URL = process.env.REACT_APP_API_URL ||"https://taskmanagerapp-production-91fc.up.railway.app/api";
 
 const Task = ({ toast, tasks, setTasks }) => {
   const [searchQuery, setSearchQuery] = useState("");

@@ -85,7 +85,7 @@ const Navbar = () => {
   }, []);
 
   // Get API URL from .env or fallback to localhost:8080
-  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
+  const API_URL = process.env.REACT_APP_API_URL || "https://taskmanagerapp-production-91fc.up.railway.app";
 
   function openTodo() {
     navigate("/Home/todos");
@@ -164,7 +164,7 @@ const Navbar = () => {
   }, []);
 
   // API URL from .env or fallback to localhost:8080
-  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
+  const API_URL = process.env.REACT_APP_API_URL || "https://taskmanagerapp-production-91fc.up.railway.app";
 
   function openTodo() {
     navigate("/Home/todos");

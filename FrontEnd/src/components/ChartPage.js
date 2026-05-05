@@ -14,7 +14,7 @@ const ChartPage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/task/getTask") // Ensure backend is running
+      .get("https://taskmanagerapp-production-91fc.up.railway.app/api/task/getTask") // Ensure backend is running
       .then((response) => {
         const tasks = response.data;
         
@@ -74,7 +74,7 @@ const ChartPage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/task/getTask") // Ensure backend is running
+      .get("https://taskmanagerapp-production-91fc.up.railway.app/api/task/getTask") // Ensure backend is running
       .then((response) => {
         const tasks = response.data;
 
