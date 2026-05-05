@@ -31,7 +31,6 @@
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
-    "dotenv": "^16.4.7",
-    "vite-plugin-rewrite-all": "^1.0.1"
+    "dotenv": "^16.4.7"
   }
 }
