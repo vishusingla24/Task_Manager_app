@@ -17,16 +17,25 @@ const PORT = 8080;
 const app = express();
 
 // ✅ CORS Configuration
-app.use([
+/*app.use([
   cors({
-    origin: process.env.FRONTEND_DOMAIN || "http://localhost:3000",
+    origin: process.env.FRONTEND_DOMAIN || "https://task-manager-app-h32w.vercel.app",
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   }),
+  
   express.json(),
   express.urlencoded({ extended: true }),
 ]);
+*/
+const cors = require("cors");
 
+app.use(cors({
+  origin: "https://task-manager-app-h32w.vercel.app",
+  credentials: true,
+}));
+
+app.options("*", cors()); // ⭐ VERY IMPORTANT
 // ✅ MongoDB Session Store
 const sessionStore = MongoStore.create({
   mongoUrl: process.env.MONGO_URI,

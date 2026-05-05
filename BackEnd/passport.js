@@ -13,13 +13,13 @@ console.log("Facebook Client ID:", process.env.FACEBOOK_CLIENT_ID ? "✅ Loaded"
 const googleCredentials = {
   clientID: process.env.GOOGLE_CLIENT_ID,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-  callbackURL: process.env.GOOGLE_CALLBACK_URL || "http://localhost:8080/google/callback",
+  callbackURL: process.env.GOOGLE_CALLBACK_URL || "https://taskmanagerapp-production-91fc.up.railway.app/google/callback",
 };
 
 const fbCredentials = {
   clientID: process.env.FACEBOOK_CLIENT_ID,
   clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-  callbackURL: process.env.FACEBOOK_CALLBACK_URL || "http://localhost:8080/facebook/callback",
+  callbackURL: process.env.FACEBOOK_CALLBACK_URL || "https://taskmanagerapp-production-91fc.up.railway.app/facebook/callback",
   profileFields: ["id", "email", "displayName", "picture.type(large)"],
 };
 
