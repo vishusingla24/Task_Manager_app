@@ -53,7 +53,7 @@ const schema = new mongoose.Schema({
 module.exports = dataDatabase.model("UserData", schema);
 */
 const mongoose = require("mongoose");
-const dataDatabase = mongoose.createConnection(process.env.MONGO_URL);
+const dataDatabase = mongoose.createConnection(process.env.MONGO_URI);
 
 const activitySchema = new mongoose.Schema({
   type: { type: String, enum: ['started', 'commented', 'bug'], required: true },

@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const authDatabase = mongoose.createConnection(process.env.MONGO_URL);
+const authDatabase = mongoose.createConnection(process.env.MONGO_URI);
 const schema = new mongoose.Schema({
   userName: {
     type: String,

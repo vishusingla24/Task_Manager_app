@@ -29,7 +29,7 @@ app.use([
 
 // ✅ MongoDB Session Store
 const sessionStore = MongoStore.create({
-  mongoUrl: process.env.MONGO_URL,
+  mongoUrl: process.env.MONGO_URI,
   collectionName: "session",
 });
 
