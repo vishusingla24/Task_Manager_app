@@ -108,8 +108,17 @@ const localStrategyCallback = async (email, password, done) => {
 };
 
 // ✅ Register Strategies with Passport
-passport.use(new GoogleStrategy(googleCredentials, googleCallback));
-passport.use(new FacebookStrategy(fbCredentials, facebookCallback));
+/*passport.use(new GoogleStrategy(googleCredentials, googleCallback));
+passport.use(new FacebookStrategy(fbCredentials, facebookCallback));*/
+// ✅ Google Strategy (only if env exists)
+if (process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET) {
+  passport.use(new GoogleStrategy(googleCredentials, googleCallback));
+}
+
+// ✅ Facebook Strategy (only if env exists)
+if (process.env.FACEBOOK_CLIENT_ID && process.env.FACEBOOK_CLIENT_SECRET) {
+  passport.use(new FacebookStrategy(fbCredentials, facebookCallback));
+}
 passport.use(new LocalStrategy({ usernameField: "email" }, localStrategyCallback));
 
 // ✅ Serialize and Deserialize Users
