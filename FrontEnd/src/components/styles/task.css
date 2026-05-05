@@ -1,0 +1,541 @@
+/* :root {
+  --nav : #86A789;
+  --prof: #B2C8BA;
+  --bg: #EBF3E8;
+  --grey: #D2E3C8;
+} */
+/*.add-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.add-div input,
+select {
+  margin: none;
+  height: 40px;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px 10px 10px 15px;
+  background-color: var(--serBar);
+  color: var(--text);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+}
+select {
+  padding-right: 25px;
+}
+#add-bt {
+  border: none;
+  outline: none;
+  margin: 0;
+  background-color: inherit;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  height: 40px;
+  width: 50%;
+  text-transform: uppercase;
+  border-radius: 30px;
+  color: var(--text);
+  background-color: var(--nav);
+}
+#add-bt:hover {
+  border-radius: 10px;
+  font-weight: 500;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+}
+.task-body {
+  display: flex;
+  overflow: hidden;
+  padding: 20px;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--bg);
+  border-radius: 15px;
+  box-shadow: rgba(151, 147, 147, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.task-body h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: var(--text);
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+}
+.cur-task-list {
+  margin-bottom: 10px;
+}
+.cur-task-list,
+.completed-task {
+  height: 40%;
+  background-color: var(--grey);
+  overflow-y: scroll;
+  border-radius: 15px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+}
+.cur-task-list::-webkit-scrollbar,
+.completed-task::-webkit-scrollbar {
+  display: none;
+}
+table {
+  width: 100%;
+  overflow-y: scroll;
+  padding: 0 20px 0 20px;
+  background-color: var(--grey);
+  border-radius: 15px;
+  margin-bottom: 15px;
+  height: auto;
+}
+table td {
+  color: var(--text);
+  opacity: 0.7;
+}
+table th {
+  position: sticky;
+  top: 0;
+  color: var(--text);
+  font-weight: 400;
+  left: 0;
+  background-color: var(--nav);
+  z-index: 1000;
+}
+table th {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+}
+table,
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  text-transform: capitalize;
+  border-collapse: collapse;
+}
+#done-bt {
+  margin: 0;
+  border: 0;
+  outline: 0;
+  width: 55%;
+  height: 20px;
+  vertical-align: middle;
+  background-color: rgb(233, 92, 92);
+  color: var(--text);
+  border-radius: 5px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+#task-remove {
+  margin: 0;
+  border: 0;
+  outline: 0;
+  background-color: inherit;
+  cursor: pointer;
+}
+*/
+/* :root {
+  --nav : #86A789;
+  --prof: #B2C8BA;
+  --bg: #EBF3E8;
+  --grey: #D2E3C8;
+} */
+.add-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.add-div input,
+select {
+  margin: none;
+  height: 40px;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px 10px 10px 15px;
+  background-color: var(--serBar);
+  color: var(--text);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+}
+
+select {
+  padding-right: 25px;
+}
+
+#add-bt {
+  border: none;
+  outline: none;
+  margin: 0;
+  background-color: inherit;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  height: 40px;
+  width: 50%;
+  text-transform: uppercase;
+  border-radius: 30px;
+  color: var(--text);
+  background-color: var(--nav);
+}
+
+#add-bt:hover {
+  border-radius: 10px;
+  font-weight: 500;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+}
+
+.task-body {
+  display: flex;
+  overflow: hidden;
+  padding: 20px;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--bg);
+  border-radius: 15px;
+  box-shadow: rgba(151, 147, 147, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.task-body h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: var(--text);
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cur-task-list {
+  margin-bottom: 10px;
+}
+
+.cur-task-list,
+.completed-task {
+  height: 40%;
+  background-color: var(--grey);
+  overflow-y: scroll;
+  border-radius: 15px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cur-task-list::-webkit-scrollbar,
+.completed-task::-webkit-scrollbar {
+  display: none;
+}
+
+table {
+  width: 100%;
+  overflow-y: scroll;
+  padding: 0 20px 0 20px;
+  background-color: var(--grey);
+  border-radius: 15px;
+  margin-bottom: 15px;
+  height: auto;
+}
+
+table td {
+  color: var(--text);
+  opacity: 0.7;
+}
+
+table th {
+  position: sticky;
+  top: 0;
+  color: var(--text);
+  font-weight: 400;
+  left: 0;
+  background-color: var(--nav);
+  z-index: 1000;
+}
+
+table th {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+table,
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  text-transform: capitalize;
+  border-collapse: collapse;
+}
+
+#done-bt {
+  margin: 0;
+  border: 0;
+  outline: 0;
+  width: 55%;
+  height: 20px;
+  vertical-align: middle;
+  background-color: rgb(233, 92, 92);
+  color: var(--text);
+  border-radius: 5px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+#task-remove {
+  margin: 0;
+  border: 0;
+  outline: 0;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+/* Update Button Styling */
+#update-bt {
+  margin: 0;
+  border: 0;
+  outline: 0;
+  width: 55%;
+  height: 20px;
+  vertical-align: middle;
+  background-color: rgb(92, 109, 233); /* Using --nav color */
+  color: white; /* White text */
+  border-radius: 5px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+#update-bt:hover {
+  background-color: rgb(92, 109, 233); /* Darker shade of --nav for hover */
+}
+
+/* Modal Styling to Match Task Page */
+.update-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg); /* Using --bg color */
+  padding: 20px;
+  border: 1px solid var(--grey); /* Using --grey color */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15); /* Consistent shadow */
+  z-index: 1000;
+  width: 400px;
+  border-radius: 15px; /* Consistent border radius */
+}
+
+.update-modal h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: var(--text); /* Using --text color */
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15); /* Consistent text shadow */
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.modal-field label {
+  font-weight: bold;
+  color: var(--text); /* Using --text color */
+}
+
+.modal-field input,
+.modal-field textarea,
+.modal-field select {
+  padding: 8px;
+  border: 1px solid var(--grey); /* Using --grey color */
+  border-radius: 8px; /* Consistent border radius */
+  font-size: 14px;
+  background-color: var(--bg); /* Using --bg color */
+  color: var(--text); /* Using --text color */
+}
+
+.modal-field textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px; /* Consistent border radius */
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.modal-actions button:first-child {
+  background-color: var(--nav); /* Using --nav color */
+  color: white;
+}
+
+.modal-actions button:last-child {
+  background-color: #f44336; /* Red color for cancel button */
+  color: white;
+}
+
+
+.activities-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 90%;
+  /* Increased width to 90% of the screen */
+  height: 90%;
+  /* Increased height to 90% of the screen */
+  max-width: 1200px;
+  /* Optional: Set a maximum width */
+  max-height: 800px;
+  /* Optional: Set a maximum height */
+  overflow: auto;
+  /* Add scroll if content exceeds the modal height */
+}
+
+.activities-modal h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+.activities-modal .modal-content {
+  max-height: calc(100% - 100px);
+  /* Adjust height to fit within the modal */
+  overflow-y: auto;
+  /* Add scroll if content exceeds the height */
+}
+
+.activities-list {
+  list-style: none;
+  padding: 0;
+}
+
+.activities-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  /* Increased spacing between activities */
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.activities-list li input[type="checkbox"] {
+  margin-right: 15px;
+  margin-top: 5px;
+  /* Align checkbox with the first line of text */
+}
+
+.activities-list li label {
+  flex: 1;
+}
+
+.activity-header {
+  margin-bottom: 10px;
+}
+
+.activity-header span {
+  font-weight: bold;
+  color: #333;
+}
+
+.activity-timestamp {
+  color: #888;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+.activity-content {
+  color: #333;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.add-activity-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.add-activity-form select,
+.add-activity-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.add-activity-form button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-activity-form button:hover {
+  background-color: #0056b3;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f44336;
+  color: white;
+}
+
+.modal-actions button:hover {
+  background-color: #d32f2f;
+}
