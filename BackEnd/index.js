@@ -28,14 +28,16 @@ const app = express();
   express.urlencoded({ extended: true }),
 ]);
 */
-const cors = require("cors");
+
 
 app.use(cors({
   origin: "https://task-manager-app-h32w.vercel.app",
   credentials: true,
 }));
 
-app.options("*", cors()); // ⭐ VERY IMPORTANT
+app.options("*", cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true })); // ⭐ VERY IMPORTANT
 // ✅ MongoDB Session Store
 const sessionStore = MongoStore.create({
   mongoUrl: process.env.MONGO_URI,
