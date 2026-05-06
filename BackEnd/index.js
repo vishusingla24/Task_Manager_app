@@ -28,7 +28,7 @@ const app = express();
   express.urlencoded({ extended: true }),
 ]);
 */
-
+/*
 
 app.use(cors({
   origin: "https://task-manager-app-h32w.vercel.app",
@@ -38,6 +38,34 @@ app.use(cors({
 app.options("*", cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // ⭐ VERY IMPORTANT
+*/
+const allowedOrigins = [
+  "http://localhost:3000",
+  "http://127.0.0.1:3000",
+  "https://task-manager-app-h32w.vercel.app"
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    // allow requests with no origin (Postman/mobile apps)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+}));
+
+app.options("*", cors());
+
+
+
+
+
 // ✅ MongoDB Session Store
 const sessionStore = MongoStore.create({
   mongoUrl: process.env.MONGO_URI,
@@ -87,7 +115,8 @@ app.get(
   "/api/google/callback",
   passport.authenticate("google", {
     failureRedirect: process.env.FRONTEND_DOMAIN || "http://localhost:3000",
-    successRedirect: `${process.env.FRONTEND_DOMAIN}/Home`,
+    /*successRedirect: `${process.env.FRONTEND_DOMAIN}/Home`,*/successRedirect:
+      process.env.FRONTEND_DOMAIN || "http://localhost:3000/Home",
   })
 );
 
